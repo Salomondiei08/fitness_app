@@ -9,7 +9,7 @@ class Activity {
   final int daysToComplete;
   final Duration duration;
   final int timeToCompleteInMinutes;
-  final Map<String, String> steps;
+  final List<String> steps;
   Activity({
     required this.id,
     required this.name,

@@ -7,15 +7,19 @@ class HomeIcon extends StatelessWidget {
     required this.icon,
     required this.backgroundColor,
     required this.iconColor,
+     this.onPressed,
   }) : super(key: key);
 
   final IconData icon;
   final Color backgroundColor;
   final Color iconColor;
+  final void Function()? onPressed;
   
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 40,
+      height: 40,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.black.withOpacity(0.4),
@@ -23,11 +27,12 @@ class HomeIcon extends StatelessWidget {
         color: backgroundColor,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Icon(
-          icon,
-          color: iconColor,
+      child: Center(
+        child: IconButton(
+          icon: Icon(
+            icon,
+            color: iconColor,
+          ), onPressed: onPressed,
         ),
       ),
     );

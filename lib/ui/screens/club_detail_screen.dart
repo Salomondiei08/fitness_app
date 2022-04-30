@@ -23,13 +23,11 @@ class ClubDetailScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        InkWell(
-                          onTap: () => Navigator.pop(context),
-                          child: HomeIcon(
-                              icon: Icons.arrow_back_ios,
-                              backgroundColor: club.color,
-                              iconColor: Colors.black),
-                        ),
+                        HomeIcon(
+                            icon: Icons.arrow_back_ios,
+                            backgroundColor: club.color,
+                        onPressed: () => Navigator.pop(context),
+                            iconColor: Colors.black),
                         const SizedBox(
                           height: 20,
                         ),
@@ -43,7 +41,7 @@ class ClubDetailScreen extends StatelessWidget {
                         ),
                         Card(
                           elevation: 0.0,
-                          color: club.color.withBlue(10),
+                          color: Colors.brown,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
@@ -52,7 +50,9 @@ class ClubDetailScreen extends StatelessWidget {
                             child: Text(
                               '${club.peopleEnrolled} members',
                               style: const TextStyle(
-                                  fontSize: 14, fontWeight: FontWeight.bold),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                           ),
                         ),
