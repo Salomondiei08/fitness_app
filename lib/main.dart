@@ -1,3 +1,4 @@
+import 'package:fitness_club/helpers/routes.dart';
 import 'package:fitness_club/logic/providers/club_provider.dart';
 import 'package:fitness_club/logic/providers/goal_provider.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +24,9 @@ class FitnessApp extends StatelessWidget {
           create: (_) => GoalProvider(),
         ),
       ],
-      child: const MaterialApp(
+      child:  MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+     routes: Routes.routes,
       ),
     );
   }

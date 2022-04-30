@@ -12,6 +12,7 @@ class HomeIcon extends StatelessWidget {
   final IconData icon;
   final Color backgroundColor;
   final Color iconColor;
+  
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,4 +1,4 @@
-import 'package:fitness_club/data/models/goals.dart';
+import 'package:fitness_club/models/goals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
